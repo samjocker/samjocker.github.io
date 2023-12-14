@@ -1,0 +1,21 @@
+#topTabBar {
+    width: 90%;
+    height: 60px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.63);
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.20);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 2%;
+    left: 50%;
+    margin-left: -45%;
+}
+
+#mainPhotoPage {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    display: block;
+    max-width: 95%;
+    height: auto;
+}
