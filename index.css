@@ -56,11 +56,13 @@ body {
     margin-top: 0px;
 }
 .menuButtonText_en {
+    color: #000;
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 2vmin;
 }
 .menuButtonText_ch {
+    color: #000;
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 1.8vmin;
@@ -174,6 +176,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    margin-bottom: 15px;
 }
 
 
