@@ -33,7 +33,7 @@ body {
     z-index: 5;
 }
 .toolBarText {
-    color: #000;
+    color: #001;
     font-family: Inter;
     font-size: 2vmin;
     font-style: normal;
@@ -56,13 +56,13 @@ body {
     margin-top: 0px;
 }
 .menuButtonText_en {
-    color: #000;
+    color: #001;
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 2vmin;
 }
 .menuButtonText_ch {
-    color: #000;
+    color: #001;
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 1.8vmin;
@@ -108,6 +108,7 @@ body {
 }
 #mainPageContactLink {
     color: #0066cc;
+    font-family: Inter;
     font-size: 3vmin;
     position: absolute;
     top: 85%;
