@@ -40,12 +40,21 @@ body {
     line-height: normal;
     margin: 0px;
 }
+
 #toolBarName {
-    margin-left: 2%;
-    display: flex;
+    color: #001;
+    margin-left: 1%;
     flex-direction: column;
     margin-top: 1vmin;
+    border: none;
+    height: 100%;
+    border-radius: 6px;
+    background-color: #eeeeee00;
+    padding: 0px 10px;
+    cursor: pointer;
+    display: inline-block
 }
+
 #menuBox {
     margin-top: 0px;
     margin-right: 1%;
