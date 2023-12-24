@@ -81,7 +81,7 @@ body {
 
 #mainPageContainer {
     width: 100%;
-    max-height: 700;
+    max-height: 700px;
     height: auto;
     background: white;
     margin-top: 10vmin;
@@ -90,7 +90,7 @@ body {
     position: relative;
 }
 #mainPageImageContainer {
-    max-width: 80%;
+    max-width: 90%;
     max-height: 700px;
     height: auto;
     display: flex;
