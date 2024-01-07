@@ -49,8 +49,63 @@
     </div>
 
     <div class="portfolioArea">
-        
+        <h1 class="portfolioTitle">VHDL-8x8LED跑馬燈＆光平方</h1>
+        <p class="portfolioTime">高二</p>
+        <div class="portfolioBoard">
+            <img src="img/lightSquare.png" class="portfolioImg" />
+            <h1 class="contentTitle">前言</h1>
+            <p class="contentArticle">當初在練數位電子選手時指導老師給的題目是要讓led矩陣亮起來就好，但我覺得假設只讓led矩陣亮起來有點小無趣，所以我在完成基本掃描電路讓led矩陣顯示數字後就開始上網自學VHDL陣列怎麼使用，接下來就想辦法讓他進化變成跑馬燈了。</p>
+            <h1 class="contentTitle">原理</h1>
+            <ol type="1" class="contentNumList">
+                <li>將想要顯示的畫面存成超長的矩陣（ex:8列44行之類的）</li>
+                <li>先讀取8*(0~7)的顯示畫面陣列</li>
+                <li>用掃描電路控制LED矩陣顯示出來</li>
+                <li>接下來向右一格顯示8*(1~8)的陣列</li>
+                <li>依此類推直到顯示到陣列結尾從頭開始</li>
+            </ol>
+            <h1 class="contentTitle">心得</h1>
+            <p class="contentArticle">這次的VHDL雖然不是太難但我卻從中得到很多樂趣，當看網路上別人用FPGA做8x8led時都是不會動的畫面但我的卻會動就有一種魔名的成就感，甚至如果指導老師給我長一點的時間或許我可能就做出pwm調光的led矩陣吧，如果會動又有pwm調光的led矩陣或許可以拿來播影片了😂，希望之後有時間可以完成pwm調光led矩陣。</p>
+            <div class="contentLinkArea">
+                <a href="https://github.com/samjocker/VHDL-8x8led" target="_blank" class="contentLink">詳細程式碼 ></a>
+                <a href="https://youtu.be/qNlAXW6Nfes?si=FJU-fjrbjiKvfJI9" target="_blank" class="contentLink">展示影片 ></a>
+            </div>
+            
+        </div>
     </div>
+
+    <div class="portfolioArea">
+        <h1 class="portfolioTitle">魔法棒遙控器</h1>
+        <p class="portfolioTime">高二</p>
+        <div class="portfolioBoard">
+            <img src="img/magicWand.jpg" class="portfolioImg" />
+            <h1 class="contentTitle">前言</h1>
+            <p class="contentArticle">
+                高一升高二暑假時剛好被科主任問到要不要想一個題目參加專題比賽，這時因為暑假在重看哈利波特電影所以對魔法世界有股憧憬，所以就隨口跟主任提魔法棒遙控器的想法，沒想到主任竟然同意製作這個無釐頭的題目，也剛好我同學想要做光立方看看然後我想說光立方或許能當作施展魔法的顯示器，於是我就跟他一拍即合一起報名了專題製作創意組！            </p>
+            <h1 class="contentTitle">原理</h1>
+            <ol type="1" class="contentNumList">
+                <li>使用esp32讀取mpu6050角速度原始值</li>
+                <li>將數值使用卡耳曼濾波加上積分換算相對角度</li>
+                <li>用角度數據加上勾股定理計算出移動軌跡並記錄</li>
+                <li>將軌跡常規化(縮放至上下左右軌跡貼在32*32邊框)</li>
+                <li>辨識特徵</li>
+                <ol type="I" class="contentNumListSecond">
+                    <li>如果常規化時X軸放大倍率大於一定值視為揮出垂直線</li>
+                    <li>如果常規化時Y軸放大倍率大於一定值視為揮出水平線</li>
+                    <li>如果上下兩邊單行水平軌跡點超過定值視為揮出正方形</li>
+                    <li>如果上下兩邊單行水平軌跡點超過定值但小於正方形定值視為揮出圓形</li>
+                    <li>其他視為揮出三角形</li>
+                    <li>根據揮出形狀做出對應動作(demo 版本為藍牙控制手機音樂暫停播放等功能)</li>
+                </ol>
+            </ol>
+            <h1 class="contentTitle">心得</h1>
+            <p class="contentArticle">這次的VHDL雖然不是太難但我卻從中得到很多樂趣，當看網路上別人用FPGA做8x8led時都是不會動的畫面但我的卻會動就有一種魔名的成就感，甚至如果指導老師給我長一點的時間或許我可能就做出pwm調光的led矩陣吧，如果會動又有pwm調光的led矩陣或許可以拿來播影片了😂，希望之後有時間可以完成pwm調光led矩陣。</p>
+            <div class="contentLinkArea">
+                <a href="https://github.com/samjocker/Magic_wandXLED_cube" target="_blank" class="contentLink">詳細程式碼 ></a>
+            </div>
+            
+        </div>
+    </div>
+    
     
 </body>
 </html>
