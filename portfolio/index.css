@@ -154,6 +154,29 @@ body {
     display: flex;
     flex-direction: column;
 }
+.contentImagesBox {
+    display: flex;
+    flex-wrap: wrap;
+}
+.supplementImageBox {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.supplementImage {
+    height: clamp(25vmin, 30vmin, 30vh);
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+.imgSupplement {
+    font-size: 0.4em;
+    font-weight: inherit;
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
 .contentLink {
     font-size: 0.5em;
     color: #0066cc;
