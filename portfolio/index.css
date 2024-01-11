@@ -145,6 +145,7 @@ body {
     margin-top: 10px;
 }
 .contentNumListSecond {
+    color: rgb(60, 60, 60);
     font-size: 0.9em;
 }
 .contentLinkArea {
@@ -172,6 +173,7 @@ body {
     border-radius: 10px;
 }
 .imgSupplement {
+    color: rgb(100, 100, 100);
     font-size: 0.4em;
     font-weight: inherit;
     margin-top: 5px;
