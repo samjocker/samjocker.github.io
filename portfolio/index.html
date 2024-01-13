@@ -315,7 +315,7 @@
             <div class="contentImagesBox">
                 <div class="supplementImageBox">
                     <img src="img/cameraTrackSystemEx1.png" class="supplementImage"/>
-                    <p class="imgSupplement">此示意圖表示老師位置偏向左邊 終端機提示鏡頭要向左移動</p>
+                    <p class="imgSupplement">偵測到位置偏左終端機提示鏡頭向左移動示意圖</p>
                 </div>
             </div>
             <h1 class="contentTitle">心得</h1>
@@ -335,6 +335,47 @@
     </div>
 
     <div class="portfolioArea">
+        <h1 class="portfolioTitle">VHDL-DHT11 溫濕度感應器串列通訊</h1>
+        <p class="portfolioTime">高二</p>
+        <div class="portfolioBoard">
+            <img src="img/DHT11.jpg" class="portfolioImg" />
+            <h1 class="contentTitle">前言</h1>
+            <p class="contentArticle">
+                當初因為被選上了工科技藝競賽數位電子組的選手 所以開始了VHDL 的培
+                訓 經過了兩個月的基本語法培訓後我開始嘗試去看原模組data sheet 照著要
+                求的訊號去跟DHT11 溫濕度感應器溝通獲取溫濕度數據。            </p>
+            <h1 class="contentTitle">原理</h1>
+            <ol type="1" class="contentNumList">
+                <li>使用moore狀態機來與dht11溝通</li>
+                <ol type="I", class="contentNumListSecond">
+                    <li>資料腳設為輸出 發送開始訊號</li>
+                    <li>資料腳設為輸入 接收dht11 回傳資料</li>
+                    <li>將資料放到signal方便其他模組讀取</li>
+                    <li>停頓1秒左右給dht11緩衝時間</li>
+                    <li>重複以上</li>
+                </ol>
+                <li>將溫濕度integer 型態訊號轉成4位元7段顯示器顯示輸出</li>
+            </ol>
+            <h1 class="contentTitle">心得</h1>
+            <p class="contentArticle">
+                在學習這個硬體描述語言過程中其實蠻煩躁的因為VHDL 不像普通程式語言
+那樣是循序執行 他是有些同步執行有些循序 所以整個邏輯思維大爆炸完全不
+能套用以前寫c++,python 等程式語言的想法 要邊寫邊想像合成出的電路大概
+長怎樣來推斷順序是什麼 就算腦袋都想好了出來結果也可能跟想像完全不一樣
+😭這次的串列通訊也花了我整整一星期的時間在debug 但當最後成功時的雀躍
+感真的遠遠超過使用Arduino來讀取DHT11😆經過這次成功的經驗後我對狀態機
+的使用更為熟練了 也對串列通訊有了更深的認識 debug技術也大幅提升 因
+為沒有邏輯分析儀所以我用示波器來debug 已經用的滾瓜爛熟了！
+            </p>
+            <div class="contentLinkArea">
+                <a href="https://github.com/samjocker/VHDL-dht11" target="_blank" class="contentLink">詳細程式碼 ></a>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="portfolioArea">
         <h1 class="portfolioTitle">VHDL-8x8LED跑馬燈＆光平方</h1>
         <p class="portfolioTime">高二</p>
         <div class="portfolioBoard">
@@ -351,6 +392,16 @@
                 <li>接下來向右一格顯示8*(1~8)的陣列</li>
                 <li>依此類推直到顯示到陣列結尾從頭開始</li>
             </ol>
+            <div class="contentImagesBox">
+                <div class="supplementImageBox">
+                    <img src="img/lightMatrix.jpeg" class="supplementImage"/>
+                    <p class="imgSupplement">普通8*8矩陣螢幕版</p>
+                </div>
+                <div class="supplementImageBox">
+                    <img src="img/lightSquare.png" class="supplementImage"/>
+                    <p class="imgSupplement">進階RGB光平方版</p>
+                </div>
+            </div>
             <h1 class="contentTitle">心得</h1>
             <p class="contentArticle">
                 這次的VHDL雖然不是太難但我卻從中得到很多樂趣，當看網路上別人用FPGA做8x8led時都是不會動的畫面但我的卻會動就有一種魔名的成就感，甚至如果指導老師給我長一點的時間或許我可能就做出pwm調光的led矩陣吧，如果會動又有pwm調光的led矩陣或許可以拿來播影片了😂，希望之後有時間可以完成pwm調光led矩陣。
@@ -406,6 +457,169 @@
             </p>
             <div class="contentLinkArea">
                 <a href="https://github.com/samjocker/Magic_wandXLED_cube" target="_blank" class="contentLink">詳細程式碼 ></a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="portfolioArea">
+        <h1 class="portfolioTitle">TIRT 視覺辨識無人車比賽</h1>
+        <p class="portfolioTime">高二</p>
+        <div class="portfolioBoard">
+            <img src="img/TIRTcar.jpeg" class="portfolioImg" />
+            <h1 class="contentTitle">前言</h1>
+            <p class="contentArticle">
+                在2022年暑假我看到今年TIRT比賽的海報 其中視覺辨識無人車項目最讓
+我感興趣因為視覺辨識是我沒接觸過的領域 我覺得可以趁機接觸這個領域順便
+跳脫舒適圈一下 於是我馬上找了我們班上熱愛手作的同學組成了三人小隊開始
+研發我們的自動駕駛小車車了。
+            </p>
+            <h1 class="contentTitle">視覺辨識設計想法</h1>
+            <p class="contentArticle">
+                要能達成車子跟隨兩條白色跑道線所組成賽道大部分人會使用市售的AI 鏡
+頭模組來簡單的達成循線行走的目的 但由於我們時間還有3個月我自認為不要
+做這種沒有技術含量的作法 於是我開始了自研跑道辨識系統的道路了。不由於
+我完全沒接觸過機器學習所以我打算不用機器學習來挑戰製作一個跑道視覺辨
+識 下一頁將會對我的視覺辨識做詳細的製作說明。
+            </p>
+            <h1 class="contentTitle">原理</h1>
+            <img src="img/TIRTex1.png" class="subImage" />
+            <h1 class="contentTitle">效果展示</h1>
+            <img src="img/TIRTresult.jpg" class="subImage" />
+            <h1 class="contentTitle">心得</h1>
+            <p class="contentArticle">
+                本次比賽只提到這些部分是因為雖然我們三個月前開始準備比賽 但是團隊
+合作效果並不理想 造成我個人專注在視覺辨識研發 以及過於相信車體研發的
+組員 導致我們在比賽前幾天我的視覺辨識程式趨近於完成只剩下調整參數階段
+但車體研發組員卻尚未完成車體及硬體電路組裝 所以我只能在比賽前一晚承擔
+了所有 開始寫arduino 控制馬達程式、調整車體等等 但很不幸的在比賽當天
+早上2 點我們的樹莓派無預警故障無法開機 經過30 分鐘撿修後還是回天乏術
+所以只能在群組上跟組員宣告比賽只能棄權的壞消息。經過這次經驗我學習到了
+時間分配的重要性以及獲得身為隊長團隊領導能力的寶貴經驗希望在往後的比
+賽能夠改進。不過這次的視覺辨識研發也讓我學到了很多圖像處理的知識 其中
+我濾掉雜訊的方法是用侵蝕像素再膨脹的方法本來以為我是用一個邪門的方法
+但後來在github上看到也有人這樣用瞬間有種想法跟大神一樣的優越感xd
+            </p>
+            
+        </div>
+    </div>
+
+    <div class="portfolioArea">
+        <h1 class="portfolioTitle">校園成績查詢系統</h1>
+        <p class="portfolioTime">高二</p>
+        <div class="portfolioBoard">
+            <img src="img/shinherPro.jpg" class="portfolioImg" />
+            <h1 class="contentTitle">前言</h1>
+            <p class="contentArticle">
+                我們學校的成績系統是外包給新河資訊有限公司他們公司的介面邏輯及設
+計要吐槽都不知道從哪裡吐槽起了 又剛好資訊科技自選作業有自己訓練影像辨
+識的選項 剛好我一個平常也熱愛手作的同學選了這個功課 在他跟我展現他訓
+練的驗證碼辨識模型有多準的同時我就說還是乾脆搞一個新的成績查詢系統 我
+們一拍即合說好他負責爬蟲我負責api、server 還有介面設計 接下來就來介紹
+我負責的部分。
+            </p>
+            <h1 class="contentTitle">製作過程</h1>
+            <ol type="1" class="contentNumList">
+                <li>pip 安裝我同學寫好的爬原成績系統資料函式庫</li>
+                <li>使用flask-socket及ngrok製作簡單的api server</li>
+                <li>因當初對網頁三件套不熟所以利用chat gpt 搞出了一個簡單算好看的查
+                    詢網頁</li>
+                <li>使用swift ui開發一個ios端App(無使用chat gpt 目前完成度40%)</li>
+            </ol>
+            <div class="contentImagesBox">
+                <div class="supplementImageBox">
+                    <img src="img/shinherEx1.png" class="supplementImage"/>
+                    <p class="imgSupplement">ios app 示意圖</p>
+                </div>
+                <div class="supplementImageBox">
+                    <img src="img/shinherEx2.jpg" class="supplementImage"/>
+                    <p class="imgSupplement">使用chatgpt製作的網頁</p>
+                </div>
+            </div>
+            <h1 class="contentTitle">心得</h1>
+            <p class="contentArticle">
+                因為這次的製作讓我學到了很多網路知識例如：路由器、socket、http https
+的差別等等 也激發了我對網頁三件套的認識之後暑假就開始學了。利用 chat
+gpt 在做網頁設計時也發現到雖然ai 很強但對於大型專案還是不太擅長 因為
+傳送程式碼有字數限制必須分段傳送十分影響效率 並且與ai 進行程式製作時
+也必須有底子才行 例如這次在與chat gpt 溝通時若無法執行我也沒有debug
+能力所以花了很多時間在與他溝通 結果到後面雖然效果不錯但程式碼超髒無用
+程式碼一堆 也因剛開始溝通不佳導致整體架構變得超奇怪 最後索性開始自學
+網頁三件套整個網頁打掉重練 但在第二版製作過程中校方更新了成績系統介面
+變好看了 在與同學討論後認為時間珍貴若我們真的做出來了對其他同學吸引力
+也不高了所以就放棄繼續網頁製作 雖然沒繼續做了但我也成功習得基本撰寫網
+頁三件套的能力👍ios app的部分因為我本人想學Swift所以就繼續當作我的練
+習題目製作下去了 也因為這個題目我學會了Swiftui、表單製作、底部功能鍵、
+堆疊式介面的應用 這次的成績系統改造計畫真的瞬間讓我技能樹成長超多！
+            </p>
+            <div class="contentLinkArea">
+                <a href="https://github.com/samjocker/TYAIpro" target="_blank" class="contentLink">詳細程式碼 ></a>
+                <a href="https://youtube.com/shorts/KYlZJUIRV8s?si=8IezvDYCn4uY00Uv" target="_blank" class="contentLink">展示影片 ></a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="portfolioArea">
+        <h1 class="portfolioTitle">機器學習ios app 實作</h1>
+        <p class="portfolioTime">高三</p>
+        <div class="portfolioBoard">
+            <img src="img/mlApp.jpeg" class="portfolioImg" />
+            <h1 class="contentTitle">前言</h1>
+            <p class="contentArticle">
+                10 月份剛好是TIRT視覺辨識無人車駕駛比賽開始的時間 所以我與我去年
+的隊友再次組成三人小隊開始準備比賽 去年的我們發現樹莓派效能略顯不足為
+了解決這個弱點 我靈機一想想到我暑假學的swift語言 突然覺得使用手機來
+當作主要開發板是一個很好的解決方案例如手機擁有高畫質鏡頭、高效能處理器、
+高精度九軸imu 等等優點 於是我開始著手研究如何執行 發現由Google 提出
+的Deeplab V3 語意分割機器學習框架十分適合拿來辨識道路 所以就開始研究
+如何將Deeplab V3 模型裝到ios app了！
+            </p>
+            <h1 class="contentTitle">製作過程</h1>
+            <ol type="1" class="contentNumList">
+                <li>使用標註工具將路線手工標注出來</li>
+                <li>將標注完的標注圖使用python-tensorflow 加上deeplab V3 框架訓練出
+                    模型</li>
+                <li>將tensorflow 模型使用coreml轉換工具轉換成coreml模型</li>
+                <li>在swift裡面讀入模型並將模型初始化</li>
+                <li>讀入圖片並放進UIImage型態變數儲存</li>
+                <li>將UIImage轉換成MultiArray[1*512*512*3]陣列型態</li>
+                <li>將陣列型態圖片使用coreml模型創建任務</li>
+                <li>取得結果陣列並轉換為UIImage型態顯示出來</li>
+                <li>進行簡單for 迴圈處理將路線標出來</li>
+            </ol>
+            <h1 class="contentTitle">心得</h1>
+            <p class="contentArticle">
+                這次實作ios app 機器學習成果比預想好很多 僅用180張圖片訓練出來的
+模型預測效果已經超出預期 如果之後比賽方開放場地圖供我們進去練習獲得實
+際跑道數據訓練更多張圖片進去效果應該不錯吧 不過唯一的小問題是我們有點
+高估手機處理器的效能以為幀率60以上輕輕鬆鬆 但實際情況卻只有12幀左右
+的表現 後來我們嘗試把圖片畫質從512＊512 縮小至128＊128 就能達成將近
+70 幀的效果 並且道路辨識也不用太高清的解析度所以我們就改用這個方法了！
+因為這次道路辨識效果遠超過預期所以我就把之前高一時隨便講講的校園自動
+駕駛車計畫再次跟幾位同學提出 幾位對維修腳踏車有興趣的同學也對這個計畫
+十分有興趣 所以為了不讓這個計畫變成説說而已的計畫我馬上開始向組員募資
+並在募資達14000元時馬上採購了一輛二手六人座協力車放置在科館內 期待往
+後成為唯一一間擁有自動駕駛車輛的高中職學校！
+            </p>
+            <div class="contentImagesBox">
+                <div class="supplementImageBox">
+                    <img src="img/mlAppEx1.jpeg" class="supplementImage"/>
+                    <p class="imgSupplement">目前辨識模型成果</p>
+                </div>
+                <div class="supplementImageBox">
+                    <img src="img/mlAppEx3.PNG" class="supplementImage"/>
+                    <p class="imgSupplement">電動車狀態顯示app</p>
+                </div>
+            </div>
+            <div class="contentImagesBox">
+                <div class="supplementImageBox">
+                    <img src="img/mlAppEx2.jpg" class="supplementImage"/>
+                    <p class="imgSupplement">已實際採買車輛進入校園製作</p>
+                </div>
+            </div>
+            <div class="contentLinkArea">
+                <a href="https://github.com/samjocker/TIRTios-app" target="_blank" class="contentLink">詳細程式碼 ></a>
             </div>
             
         </div>

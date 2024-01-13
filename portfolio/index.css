@@ -164,20 +164,34 @@ body {
     text-align: center;
     flex-direction: column;
     justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
     margin-left: auto;
     margin-right: auto;
 }
 .supplementImage {
     height: clamp(25vmin, 30vmin, 30vh);
+    width:fit-content;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .imgSupplement {
     color: rgb(100, 100, 100);
     font-size: 0.4em;
     font-weight: inherit;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 5px;
     margin-bottom: 2px;
+}
+.subImage {
+    width:70%;
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    border-radius: 15px;
 }
 .contentLink {
     font-size: 0.5em;
@@ -186,10 +200,27 @@ body {
     margin-top: 3px;
     margin-bottom: 3px;
 }
+#ARRCtitleLogo {
+    height: 2em;
+    margin-top: 40px;
+    margin-bottom: -55px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 #copyrightText {
     display: flex;
     justify-content: center;
     margin-top: 50px;
     margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+    .supplementImage {
+        width: 90%;
+        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
