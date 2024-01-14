@@ -171,7 +171,6 @@ body {
 }
 .supplementImage {
     height: clamp(25vmin, 30vmin, 30vh);
-    width:fit-content;
     box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
     margin-left: auto;
@@ -232,11 +231,12 @@ body {
 }
 
 @media (max-width: 700px) {
-    .supplementImage {
-        width: 90%;
-        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
-        border-radius: 10px;
+
+    #ARRCtitleLogo {
+        height: 2em;
+        margin-top: 40px;
+        margin-bottom: -30px;
         margin-left: auto;
         margin-right: auto;
-    }
+    } 
 }
